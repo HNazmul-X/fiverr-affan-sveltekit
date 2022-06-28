@@ -1,4 +1,9 @@
-<div class="graph-area" id="graph-area">
+<script>
+    let zoomed = false;
+    let showDetails = false;
+</script>
+
+<div class="graph-area" class:info-active={showDetails} id="graph-area">
     <div class="boxed-layout">
         <div class="graph-top">
             <div class="filter-block">
@@ -140,7 +145,7 @@
         </div>
     </div>
 
-    <div class="main-graph-block" id="main-graph-block">
+    <div class="main-graph-block" class:zoomed id="main-graph-block">
         <div class="top">
             <div class="legends">
                 <div class="checkboxes">
@@ -193,8 +198,7 @@
                 </div>
             </div>
             <div class="handles">
-                <!--  onclick="zoomGraph()" -->
-                <div class="heading">
+                <div class="heading" on:click={() => (zoomed = !zoomed)}>
                     <i class="icofont-ui-zoom-in" />
                     <i class="icofont-ui-zoom-out" />
                 </div>
@@ -230,7 +234,7 @@
                     </div>
                 </div>
                 <!--  onclick="showDetailedData()" -->
-                <div class="heading hide-in-lg" id="detailed-btn">Details</div>
+                <div class="heading hide-in-lg" on:click={() => (showDetails = !showDetails)}>Details</div>
             </div>
         </div>
         <div class="boxed-layout candle-graph-area">graph-area</div>
@@ -238,7 +242,7 @@
     <!-- main-graph-block ends here -->
 </div>
 <!-- graph-area ends here -->
-<div class="other-data-area" id="other-data-area">
+<div class="other-data-area" class:active={showDetails} id="other-data-area">
     <div class="boxed-layout">
         <div class="numeric-data">
             <div class="boxed-layout-60"><p>Lorem ipsum: <span class="positive">70.08</span></p></div>
