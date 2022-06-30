@@ -1,0 +1,187 @@
+/*!
+Theme Name: BigShort
+Developer: Isha Hasan
+Website: https://www.ishahasan.com/
+Description: Front-end Developer | Web Developer | WordPress Developer
+Version: 1.0.0
+*/
+
+// Variables
+@import './variables.scss';
+
+/* -------------------------------------------
+Fonts
+------------------------------------------- */
+/*-------------- Open Sans ---------------*/
+@import './fonts/open-sans.scss';
+
+/* -------------------------------------------
+Libraries 
+------------------------------------------- */
+/*--------------Normalize---------------*/
+@import './vendor/normalize.scss';
+
+/*--------------CSS Grid---------------*/
+@import './vendor/CSS-grid.scss';
+
+
+html{
+    font-size: 18px;
+    max-width: 100%;
+    overflow-x: hidden;
+    @media screen and (max-width: $xxl) {
+        font-size: 17px;
+    }
+    @media screen and (max-width: $xl) {
+        font-size: 16px;
+    }
+    @media screen and (max-width: $md) {
+        font-size: 15px;
+    }
+}
+
+body{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Open Sans';
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+.fill-class{
+    fill: var(--text-color);
+}
+
+p{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 0.778rem;
+    line-height: 1.4;
+    color: var(--text-color);
+    &.sub, .sub{
+        font-size: 11px;
+    }
+    &.red, .red{
+        color: var(--red-shade);
+    }
+}
+
+.higlight-number{
+    font-size: 1.667rem;
+    font-weight: 700;
+}
+
+.shade1{
+    color: var(--shade1-100);
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+.h1{
+    font-weight: 700;
+    font-size: 1.778rem;
+    line-height: 1.2;
+    color: var(--text-color);
+    letter-spacing: 0.02em;
+}
+
+.h2{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: var(--text-color);
+    letter-spacing: 0.02em;
+}
+
+input:focus, textarea:focus, button:focus, select:focus, a:focus{
+    outline: 0;
+}
+
+input::placeholder{
+    opacity: 0.4;
+}
+
+img{
+    max-width: 100%;
+}
+
+.hide-in-lg{
+    @media screen and (max-width: $lg) {
+        display: none !important;
+    }
+}
+
+/* -------------------------------------------
+Header
+------------------------------------------- */
+@import './header/main.scss';
+
+/* -------------------------------------------
+Sidebar
+------------------------------------------- */
+@import './sidebar/main.scss';
+
+/* -------------------------------------------
+Form Group
+------------------------------------------- */
+@import './widget/form.scss';
+
+
+.main-content{
+    width: calc(100% - 400px);
+    // margin: 0 auto;
+    padding: 5rem 1.667rem;
+    transition: all 0.4s ease 0s;
+    margin-left: 200px;
+    @media screen and (max-width: $lg) {
+        width: 100% !important;
+        margin-left: 0;
+        padding: 4.444rem 0.889rem;
+    }
+}
+
+.boxed-layout{
+    padding: 1.111rem;
+    background-color: var(--bg-color-80);
+    border: 1px solid var(--stroke-color);
+    @media screen and (max-width: $lg) {
+        padding: 10px;
+    }
+}
+
+.boxed-layout-60{
+    padding: 5px 10px;
+    background-color: var(--bg-color-60);
+    @media screen and (max-width: $lg) {
+        padding: 5px;
+    }
+}
+
+.positive-value{
+    color: var(--green-shade)
+}
+
+.negative-value{
+    color: var(--red-shade)
+}
+
+
+/* -------------------------------------------
+Pages
+------------------------------------------- */
+/*-------------- Home ---------------*/
+@import './pages/home.scss';
+
+/*-------------- SmartFlow ---------------*/
+@import './pages/smartflow.scss';

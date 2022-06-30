@@ -1,8 +1,8 @@
 <script>
 import { singleBlogData } from "../../data/blog_data";
 
-import RecentPost from "../../components/blogPage/RecentPost.svelte";
-import FullBlog from "../../components/blogPage/FullBlog.svelte";
+import RecentPost from "../../components/blog/RecentPost.svelte";
+import FullBlog from "../../components/blog/FullBlog.svelte";
 
 </script>
 

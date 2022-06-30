@@ -2066,25 +2066,25 @@ Sidebar
   width: calc(100% - 200px);
 }
 
-.sidebar-n-chat-notexpended .chat-bar {
+.sidebar-notexpended.chat-notexpended .chat-bar {
   transform: translateX(110%) !important;
 }
-.sidebar-n-chat-notexpended .chat-bar .expended {
+.sidebar-notexpended.chat-notexpended .chat-bar .expended {
   display: block;
 }
-.sidebar-n-chat-notexpended .chat-bar .content-block {
+.sidebar-notexpended.chat-notexpended .chat-bar .content-block {
   display: none;
 }
-.sidebar-n-chat-notexpended .side-bar {
+.sidebar-notexpended.chat-notexpended .side-bar {
   width: 45px !important;
 }
-.sidebar-n-chat-notexpended .side-bar .site-navigation ul li a span {
+.sidebar-notexpended.chat-notexpended .side-bar .site-navigation ul li a span {
   display: none !important;
 }
-.sidebar-n-chat-notexpended .side-bar .menu-icon {
+.sidebar-notexpended.chat-notexpended .side-bar .menu-icon {
   transform: rotate(180deg);
 }
-.sidebar-n-chat-notexpended .main-content {
+.sidebar-notexpended.chat-notexpended .main-content {
   width: calc(100% - 45px) !important;
   margin-left: 45px !important;
 }

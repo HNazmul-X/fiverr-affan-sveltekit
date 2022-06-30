@@ -36,8 +36,8 @@ export const sidebarRoute = [
         icon: "icofont-bars",
     },
     {
-        path: "/blogs",
-        activePath: "/blogs",
+        path: "/blog",
+        activePath: "/blog",
         title: "Blog",
         icon: "icofont-newspaper",
     },

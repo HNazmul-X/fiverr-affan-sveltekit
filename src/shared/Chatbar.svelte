@@ -2,7 +2,7 @@
     import { layoutConfig } from "./../store/layout_config.js";
 </script>
 
-<div class="chat-bar">
+<div class="chat-bar" id="{$layoutConfig.chatbarId}">
     <div class="menu-icon" on:click={() => layoutConfig.update((prev) => ({ ...prev, chatbarShow: !prev.chatbarShow }))}>
         <svg width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.998933 9.79415L-4.02145e-07 7.8L2.87393 7.84559L4.74893 5.89704L6.62393 3.94848L7.49893 -3.27789e-07L8 2L8 17L0.998933 9.79415Z" fill="#081840" />

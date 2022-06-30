@@ -8,7 +8,7 @@ import { blogData } from "../../data/blog_data";
 <div class="blog-section boxed-layout blog-page">
   <div class="blog-list">
     <div class="row">
-        {#each blogData as blog (blog.title)}
+        {#each blogData as blog}
         <div class="col-xl-4 col-lg-6">
             <div class="boxed-layout-60">
               <p class="title">When to use smart flow instead of Ultraflow?</p>

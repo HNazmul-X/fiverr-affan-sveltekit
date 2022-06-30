@@ -1,7 +1,7 @@
 <script>
     // @ts-nocheck
 
-    import { layoutConfig } from "./../store/layout_config.js";
+    import { layoutConfig, togglingLayout } from "./../store/layout_config.js";
     import light_theme_css from "../data/theme-css.json";
 
     let profileActive = false;
@@ -24,7 +24,7 @@
     };
 </script>
 
-<header class="page-header">
+<header class="page-header" id={$layoutConfig.navbarId}>
     <div class="left-side" on:click={() => layoutConfig.update((prev) => ({ ...prev, sidebarShow: !prev.sidebarShow }))}>
         <div class="menu-icon">
             <i class="icofont-navigation-menu" id="sideBarMbl" />
@@ -35,14 +35,16 @@
     </div>
     <div class="right-side">
         <div class="icon-nav">
-            <div class="nav">
-                <i class="icofont-exchange" on:click={minimizeAll} />
+            <div class="nav" on:click={() => togglingLayout("minimize-all")}>
+                <!-- <i class="icofont-exchange" on:click={minimizeAll} /> -->
+                <i class="icofont-exchange" />
             </div>
             <div class="nav">
                 <i class="icofont-light-bulb" id="changeTheme" on:click={toggleTheme} />
             </div>
             <div class="nav">
-                <i class="icofont-comment" on:click={() => layoutConfig.update((prev) => ({ ...prev, chatbarShow: !prev.chatbarShow }))} />
+                <i class="icofont-comment" on:click={() => togglingLayout($layoutConfig.chatbarId)} />
+                <!-- <i class="icofont-comment" on:click={() => layoutConfig.update((prev) => ({ ...prev, chatbarShow: !prev.chatbarShow }))} /> -->
             </div>
         </div>
         <div class="profile-detail">

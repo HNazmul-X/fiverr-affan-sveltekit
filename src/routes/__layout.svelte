@@ -1,8 +1,9 @@
 <script>
+    import Navbar from "./../shared/Navbar.svelte";
+    import Chatbar from "./../shared/Chatbar.svelte";
+    import Sidebar from "./../shared/Sidebar.svelte";
+
     import { layoutConfig } from "./../store/layout_config.js";
-    import Sidebar from "./../components/Sidebar.svelte";
-    import Chatbar from "./../components/Chatbar.svelte";
-    import Navbar from "./../components/Navbar.svelte";
 
     let selectedClass = "";
     let count = 1;
@@ -31,8 +32,7 @@
     <title>Bigshort Dashboard</title>
 </svelte:head>
 
-<div class=" {selectedClass} ">
-    <button on:click={() => count++}>count : {count}</button>
+<div>
     <Navbar />
     <Sidebar />
     <Chatbar />

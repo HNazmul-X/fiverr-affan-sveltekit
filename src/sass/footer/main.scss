@@ -1,0 +1,13 @@
+.site-footer{
+    text-align: center;
+    background-color: #DEDEDE;
+    padding: 11.111rem 0px;
+    @media screen and (max-width: $lg) {
+        padding: 5rem 0px;
+    }
+    img{
+        display: inline-block;
+        width: 245px;
+        margin-bottom: 40px;
+    }
+}
