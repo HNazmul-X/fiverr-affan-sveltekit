@@ -3,7 +3,6 @@
     import { layoutConfig } from "./../store/layout_config.js";
     import { page } from "$app/stores";
 
-    $: console.log($page);
 </script>
 
 <aside class="side-bar">

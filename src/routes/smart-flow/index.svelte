@@ -3,6 +3,11 @@
     let showDetails = false;
 </script>
 
+<!-- Svelte Header -->
+<svelte:head>
+    <title>SmartFlow || Bigshort Dashboard</title>
+</svelte:head>
+
 <div class="graph-area" class:info-active={showDetails} id="graph-area">
     <div class="boxed-layout">
         <div class="graph-top">

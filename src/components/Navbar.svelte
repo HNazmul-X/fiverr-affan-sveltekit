@@ -25,7 +25,7 @@
 </script>
 
 <header class="page-header">
-    <div class="left-side">
+    <div class="left-side" on:click={() => layoutConfig.update((prev) => ({ ...prev, sidebarShow: !prev.sidebarShow }))}>
         <div class="menu-icon">
             <i class="icofont-navigation-menu" id="sideBarMbl" />
         </div>

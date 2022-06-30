@@ -1,3 +1,11 @@
+
+
+<!-- Svelte Header -->
+<svelte:head>
+    <title>Bigshort Dashboard</title>
+</svelte:head>
+
+
 <div class="top-lists-block">
     <div class="top-section" />
     <div class="top-lists">

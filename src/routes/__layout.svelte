@@ -6,23 +6,30 @@
 
     let selectedClass = "";
     let count = 1;
-    const { sidebarShow, chatbarShow } = $layoutConfig;
+
+    $: console.log($layoutConfig);
 
     $: {
         if (!$layoutConfig.sidebarShow && $layoutConfig.chatbarShow) {
-            selectedClass = "sidebar-notexpended";
+            selectedClass = isMobile() ? "sidebar-open" : "sidebar-notexpended";
         } else if (!$layoutConfig.chatbarShow && $layoutConfig.sidebarShow) {
-            selectedClass = "chat-notexpended";
+            selectedClass = "chat-notexpended chat-open";
         } else if (!$layoutConfig.sidebarShow && !$layoutConfig.chatbarShow) {
-            selectedClass = "sidebar-n-chat-notexpended";
+            selectedClass = isMobile() ? "" : "sidebar-n-chat-notexpended";
         } else {
             selectedClass = "a";
         }
     }
 
-
-
+    const isMobile = () => {
+        return window.innerWidth <= 992;
+    };
 </script>
+
+<!-- Svelte Header -->
+<svelte:head>
+    <title>Bigshort Dashboard</title>
+</svelte:head>
 
 <div class=" {selectedClass} ">
     <button on:click={() => count++}>count : {count}</button>
