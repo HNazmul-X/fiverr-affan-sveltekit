@@ -13,16 +13,27 @@ export const layoutConfig = writable({
 export const togglingLayout = (content = "") => {
     try {
         const unSubscribe = layoutConfig.subscribe((value) => {
-            const navbar = document.getElementById(value.navbarId)
             const body = document.body;
+            const isSmallDevice = window.innerWidth < 992
             const toggleBodyClass = (_classes = "") => _classes.split(" ").forEach((c) => body.classList.toggle(c))
             const bodyHasClass = _class => body.classList.contains(_class)
+            const addingMobileClass = (_class) => {
+                if (body.className === _class || !body.className) toggleBodyClass(_class)
+                else if (body.className !== _class) {
+                    body.className = ""
+                    body.classList.add(_class)
+                } else {
+                    body.className = ""
+                }
+
+            }
+            // adding Class by specific Layout
 
             if (content === value.sidebarId) {
-                toggleBodyClass("sidebar-notexpended")
+                !isSmallDevice ? toggleBodyClass("sidebar-notexpended") : addingMobileClass("sidebar-open")
             } else if (content === value.chatbarId) {
-                toggleBodyClass('chat-notexpended')
-            } else if (content === "minimize-all") {
+                !isSmallDevice ? toggleBodyClass('chat-notexpended') : addingMobileClass("chat-open")
+            } else if (content === "minimize-all" && !isSmallDevice ) {
                 if (!bodyHasClass('chat-notexpended') || !bodyHasClass("sidebar-notexpended")) {
                     body.classList.add("chat-notexpended", "sidebar-notexpended", "sidebar-open")
                 } else {

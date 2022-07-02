@@ -19,6 +19,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"nanoid": "^4.0.0",
 		"sass": "^1.53.0"
 	}
 }
