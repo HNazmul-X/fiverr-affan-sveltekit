@@ -2,7 +2,6 @@
 	import FormInput from '../shared/Inputs/FormInput.svelte';
 	let data = { email: '', password: '' };
 
-	$: console.log(data);
 </script>
 
 <div class="page-content">

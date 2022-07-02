@@ -8,7 +8,6 @@
 
 	const toggleTheme = () => {
 		const styleTag = document.getElementById('theme-toggle');
-		console.log(styleTag.innerText);
 		if (styleTag?.innerText !== light_theme_css.text) {
 			styleTag.innerText = light_theme_css.text;
 		} else {

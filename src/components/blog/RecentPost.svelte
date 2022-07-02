@@ -1,7 +1,6 @@
 <script>
     import RecentBlogCard from "./../../shared/Cards/RecentBlogCard.svelte";
     import { blogData } from "../../data/blog_data";
-    console.log(blogData);
 </script>
 
 <div class="col-lg-4">

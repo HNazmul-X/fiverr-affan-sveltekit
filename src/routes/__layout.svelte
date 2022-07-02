@@ -8,7 +8,6 @@
     let selectedClass = "";
     let count = 1;
 
-    $: console.log($layoutConfig);
 
     $: {
         if (!$layoutConfig.sidebarShow && $layoutConfig.chatbarShow) {
